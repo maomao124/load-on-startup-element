@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         metadata-complete="false" version="4.0">
+    <!-- metadata-complete取值为true，表示关闭注解支持 -->
+    <!-- metadata-complete取值为false，表示启用注解支持 -->
+    <servlet>
+        <servlet-name>MyServlet1</servlet-name>
+        <servlet-class>mao.loadonstartupelement.MyServlet1</servlet-class>
+        <!-- load-on-startup 取值0 -->
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>MyServlet2</servlet-name>
+        <servlet-class>mao.loadonstartupelement.MyServlet1</servlet-class>
+        <!-- load-on-startup 取值1 -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>MyServlet3</servlet-name>
+        <servlet-class>mao.loadonstartupelement.MyServlet1</servlet-class>
+        <!-- load-on-startup 取值2 -->
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>MyServlet4</servlet-name>
+        <servlet-class>mao.loadonstartupelement.MyServlet1</servlet-class>
+        <!-- load-on-startup 取值-1-->
+        <load-on-startup>-1</load-on-startup>
+    </servlet>
+    <!--不设置 load-on-startup ，去默认值 -->
+    <servlet>
+        <servlet-name>MyServlet5</servlet-name>
+        <servlet-class>mao.loadonstartupelement.MyServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet1</servlet-name>
+        <url-pattern>/MyServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyServlet2</servlet-name>
+        <url-pattern>/MyServlet2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyServlet3</servlet-name>
+        <url-pattern>/MyServlet3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyServlet4</servlet-name>
+        <url-pattern>/MyServlet4</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyServlet5</servlet-name>
+        <url-pattern>/MyServlet5</url-pattern>
+    </servlet-mapping>
+</web-app>
